@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/constants/colors.dart';
+import 'package:spotify/utils/constants/colors.dart';
 
 class AElevatedButtonTheme {
   AElevatedButtonTheme._();
@@ -9,7 +9,7 @@ class AElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
-      backgroundColor: AColors.primary,
+      backgroundColor: AColors.primary500,
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
       side: const BorderSide(color: Colors.blue),
@@ -27,7 +27,7 @@ class AElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
-      backgroundColor: AColors.primary,
+      backgroundColor: AColors.primary700,
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
       side: const BorderSide(color: Colors.blue),

@@ -4,9 +4,16 @@ class AColors {
   AColors._();
 
   // App Basic Colors
-  static const Color primary = Colors.blue;
-  static const Color secondary = Colors.amber;
-  static const Color accent = Colors.blueAccent;
+  static const Color primary50 = Color(0xFFf6f2ff);
+  static const Color primary100 = Color(0xFFe2d4ff);
+  static const Color primary200 = Color(0xFFccb0ff);
+  static const Color primary300 = Color(0xFFb68cff);
+  static const Color primary400 = Color(0xFFa269ff);
+  static const Color primary500 = Color(0xFF9146ff);
+  static const Color primary600 = Color(0xFF8331f5);
+  static const Color primary700 = Color(0xFF721de0);
+  static const Color primary800 = Color(0xFF5e0cc2);
+  static const Color primary900 = Color(0xFF470099);
 
   // Gradiant
   static const Gradient linearGradient = LinearGradient(

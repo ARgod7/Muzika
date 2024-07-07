@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/themes/custom_theme/appbar_theme.dart';
 import 'package:spotify/utils/themes/custom_theme/bottom_sheet_theme.dart';
 import 'package:spotify/utils/themes/custom_theme/checkbox_theme.dart';
@@ -15,7 +16,7 @@ class AAppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    primaryColor: AColors.primary500,
     scaffoldBackgroundColor: Colors.white,
     textTheme: ATextTheme.lightTextTheme,
     elevatedButtonTheme: AElevatedButtonTheme.lightElevatedButtonTheme,
