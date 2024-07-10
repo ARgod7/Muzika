@@ -26,13 +26,17 @@ class AColors {
       ]);
 
   // Text Colors
-  static const Color textPrimary = Colors.black54;
-  static const Color textSecondary = Colors.grey;
+  static const Color textPrimaryLight = Color(0xffffffff);
+  static const Color textPrimaryDark = Color(0xff000000);
+  static const Color textSecondaryLight = Color(0xffaaaaaa);
+  static const Color textSecondaryDark = Color(0xff777777);
   static const Color textAccent = Colors.white;
 
   // Background colors
-  static const Color light = Colors.white;
-  static const Color dark = Colors.black;
+  static const Color light = Color(0xfff1f1f1);
+  static const Color dark = Color(0xff0e0e0e);
+  static const Color bottomDark = Color(0xff808080);
+  static const Color bottomlight = Color(0xffffffff);
   static const Color primaryBackground = Colors.white;
 
   // background container color
