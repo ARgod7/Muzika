@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pages/splash.dart';
 import 'package:spotify/utils/themes/theme.dart';
 
 void main() async {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
+      home: const SplashPage(),
     );
   }
 }

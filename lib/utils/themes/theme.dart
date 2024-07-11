@@ -14,7 +14,7 @@ class AAppTheme {
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Poppins',
+    fontFamily: 'Ubuntu',
     brightness: Brightness.light,
     primaryColor: AColors.primary500,
     scaffoldBackgroundColor: Colors.white,
@@ -29,7 +29,7 @@ class AAppTheme {
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Poppins',
+    fontFamily: 'Ubuntu',
     brightness: Brightness.dark,
     primaryColor: AColors.primary700,
     scaffoldBackgroundColor: Colors.black,
