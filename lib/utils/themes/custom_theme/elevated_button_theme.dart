@@ -12,12 +12,12 @@ class AElevatedButtonTheme {
       backgroundColor: AColors.primary500,
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(color: Colors.blue),
+      side: const BorderSide(color: AColors.primary500),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(
           fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(24),
       ),
     ),
   );
@@ -30,12 +30,12 @@ class AElevatedButtonTheme {
       backgroundColor: AColors.primary700,
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(color: Colors.blue),
+      side: const BorderSide(color: AColors.primary700),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(
           fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(24),
       ),
     ),
   );

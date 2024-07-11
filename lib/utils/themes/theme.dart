@@ -31,7 +31,7 @@ class AAppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    primaryColor: Colors.blue,
+    primaryColor: AColors.primary700,
     scaffoldBackgroundColor: Colors.black,
     textTheme: ATextTheme.darkTextTheme,
     elevatedButtonTheme: AElevatedButtonTheme.darkElevatedButtonTheme,

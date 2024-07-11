@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/utils/constants/colors.dart';
 
 class AOutlineButtonTheme {
   AOutlineButtonTheme._();
@@ -8,7 +9,7 @@ class AOutlineButtonTheme {
       style: OutlinedButton.styleFrom(
     elevation: 0,
     foregroundColor: Colors.black,
-    side: const BorderSide(color: Color.fromARGB(255, 11, 194, 255)),
+    side: const BorderSide(color: AColors.primary500),
     padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
     textStyle: const TextStyle(
         fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
@@ -22,7 +23,7 @@ class AOutlineButtonTheme {
       style: OutlinedButton.styleFrom(
     elevation: 0,
     foregroundColor: Colors.white,
-    side: const BorderSide(color: Color.fromARGB(255, 68, 205, 255)),
+    side: const BorderSide(color: AColors.primary700),
     padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
     textStyle: const TextStyle(
         fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),

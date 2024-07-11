@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/utils/constants/colors.dart';
 
 class ATextFormFieldTheme {
   ATextFormFieldTheme._();
@@ -6,8 +7,8 @@ class ATextFormFieldTheme {
   //light theme
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
-    prefixIconColor: Colors.grey,
-    suffixIconColor: Colors.grey,
+    prefixIconColor: AColors.textSecondaryLight,
+    suffixIconColor: AColors.textSecondaryLight,
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
@@ -15,10 +16,12 @@ class ATextFormFieldTheme {
         const TextStyle().copyWith(color: Colors.black.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(
         borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(width: 1, color: Colors.grey)),
+        borderSide:
+            const BorderSide(width: 1, color: AColors.textSecondaryLight)),
     enabledBorder: const OutlineInputBorder().copyWith(
         borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(width: 1, color: Colors.grey)),
+        borderSide:
+            const BorderSide(width: 1, color: AColors.textSecondaryLight)),
     focusedBorder: const OutlineInputBorder().copyWith(
         borderRadius: BorderRadius.circular(14),
         borderSide: const BorderSide(width: 1, color: Colors.black12)),

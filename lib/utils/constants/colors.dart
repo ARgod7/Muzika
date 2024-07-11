@@ -44,7 +44,7 @@ class AColors {
   static Color darkContainer = Colors.white.withOpacity(0.1);
 
   // button color
-  static const Color buttonPrimary = Colors.blue;
+  static const Color buttonPrimary = Color(0xff9146ff);
   static const Color buttonSecondary = Colors.black12;
   static const Color buttonDisabled = Colors.grey;
 
