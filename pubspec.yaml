@@ -39,6 +39,9 @@ dependencies:
   get_storage: ^2.1.1 
   device_preview: ^1.2.0
   google_nav_bar: ^5.0.6
+  flutter_bloc: ^8.1.6
+  hydrated_bloc: ^9.1.5
+  path_provider: ^2.1.3
 
   
 
