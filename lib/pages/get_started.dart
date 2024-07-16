@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pages/theme_mode.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
@@ -49,7 +50,15 @@ class GetStarted extends StatelessWidget {
                 ),
                 const SizedBox(height: ASizes.spaceBtwItems),
                 AppButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const SelectThemeMode(),
+                      ),
+                    );
+                  },
                   title: 'Get Started',
                 ),
                 const SizedBox(height: 40),
