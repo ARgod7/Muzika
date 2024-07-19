@@ -1,8 +1,11 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify/bloc/theme_cubit.dart';
+import 'package:spotify/pages/splash.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
-import 'package:spotify/utils/constants/text_string.dart';
 import 'package:spotify/widgets/app_button.dart';
 
 class SelectThemeMode extends StatelessWidget {
@@ -35,27 +38,105 @@ class SelectThemeMode extends StatelessWidget {
                     ),
                     const Spacer(),
                     const Text(
-                      "Enjoy Listening to Music",
+                      "Choose Mode",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 24,
                           color: Colors.white),
                     ),
-                    const SizedBox(height: ASizes.spaceBtwItems),
-                    const Text(
-                      AText.lorem,
-                      style: TextStyle(
-                          fontSize: 16, color: AColors.textSecondaryLight),
-                      textAlign: TextAlign.center,
+                    const SizedBox(height: ASizes.spaceBtwItems * 2),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                context
+                                    .read<ThemeCubit>()
+                                    .updateTheme(ThemeMode.dark);
+                              },
+                              child: ClipOval(
+                                child: SizedBox(
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                        sigmaX: 10, sigmaY: 10),
+                                    child: Container(
+                                      height: 80,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                          color:
+                                              AColors.softGrey.withOpacity(0.2),
+                                          shape: BoxShape.circle),
+                                      child: Image.asset(
+                                        AImages.moon,
+                                        scale: 4,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: ASizes.spaceBtwItems / 2),
+                            Text(
+                              'Dark Mode',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .apply(color: AColors.textPrimaryLight),
+                            )
+                          ],
+                        ),
+                        const SizedBox(width: 40),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                context
+                                    .read<ThemeCubit>()
+                                    .updateTheme(ThemeMode.light);
+                              },
+                              child: ClipOval(
+                                child: SizedBox(
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                        sigmaX: 10, sigmaY: 10),
+                                    child: Container(
+                                      height: 80,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                          color:
+                                              AColors.softGrey.withOpacity(0.2),
+                                          shape: BoxShape.circle),
+                                      child: Image.asset(
+                                        AImages.sun,
+                                        scale: 3.5,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: ASizes.spaceBtwItems / 2),
+                            Text(
+                              'Light Mode',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .apply(color: AColors.textPrimaryLight),
+                            )
+                          ],
+                        )
+                      ],
                     ),
-                    const SizedBox(height: ASizes.spaceBtwItems),
+                    const SizedBox(height: ASizes.spaceBtwSections * 2),
                     AppButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                const SelectThemeMode(),
+                                const SplashPage(),
                           ),
                         );
                       },

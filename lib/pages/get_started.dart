@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/pages/theme_mode.dart';
+import 'package:spotify/pages/login_signup.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
@@ -54,8 +54,7 @@ class GetStarted extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const SelectThemeMode(),
+                        builder: (BuildContext context) => const LoginSignup(),
                       ),
                     );
                   },
