@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pages/login.dart';
+import 'package:spotify/pages/signup.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
@@ -54,13 +56,30 @@ class LoginSignup extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 1,
-                        child: AppButton(onPressed: () {}, title: "Login"),
+                        child: AppButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const LoginPage(),
+                                ),
+                              );
+                            },
+                            title: "Login"),
                       ),
                       const SizedBox(width: 40),
                       Expanded(
                         flex: 1,
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const SignupPage(),
+                                ));
+                          },
                           style: OutlinedButton.styleFrom(
                               minimumSize: Size.fromHeight(80)),
                           child: Text("Sign Up"),
