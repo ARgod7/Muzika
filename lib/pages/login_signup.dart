@@ -81,7 +81,7 @@ class LoginSignup extends StatelessWidget {
                                 ));
                           },
                           style: OutlinedButton.styleFrom(
-                              minimumSize: Size.fromHeight(80)),
+                              minimumSize: Size.fromHeight(60)),
                           child: Text("Sign Up"),
                         ),
                       ),
