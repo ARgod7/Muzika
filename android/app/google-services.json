@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603335133311",
+    "project_id": "muzika01",
+    "storage_bucket": "muzika01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603335133311:android:848356c3208278ca61974a",
+        "android_client_info": {
+          "package_name": "com.example.muzika"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWstSaKECROXDCW0wwz7glEl2_yropsdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pages/signup.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
@@ -21,9 +22,13 @@ class LoginPage extends StatelessWidget {
         padding: const EdgeInsets.all(ASizes.defaultSpace),
         child: Column(
           children: [
-            Text("Login", style: Theme.of(context).textTheme.headlineMedium),
-            const SizedBox(height: 18),
-            Row(
+            const SizedBox(height: 20),
+            const Text(
+              "Login",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -39,16 +44,7 @@ class LoginPage extends StatelessWidget {
                         color: AColors.primary500)),
               ],
             ),
-            const SizedBox(height: 36),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: "Name",
-                hintStyle: TextStyle(color: AColors.grey),
-                filled: true,
-                fillColor: Colors.transparent,
-              ),
-            ),
-            const SizedBox(height: ASizes.spaceBtwInputField),
+            const SizedBox(height: 50),
             const TextField(
               decoration: InputDecoration(
                 hintText: "Email",
@@ -57,8 +53,9 @@ class LoginPage extends StatelessWidget {
                 fillColor: Colors.transparent,
               ),
             ),
-            const SizedBox(height: ASizes.spaceBtwInputField),
+            const SizedBox(height: 24),
             const TextField(
+              obscureText: true,
               decoration: InputDecoration(
                 hintText: "Password",
                 hintStyle: TextStyle(color: AColors.grey),
@@ -66,8 +63,32 @@ class LoginPage extends StatelessWidget {
                 fillColor: Colors.transparent,
               ),
             ),
-            const SizedBox(height: ASizes.spaceBtwSections * 2),
-            AppButton(onPressed: () {}, title: "Login")
+            const SizedBox(height: 50),
+            AppButton(onPressed: () {}, title: "Login"),
+            const SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Dont have an account?",
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelMedium!
+                        .apply(fontSizeFactor: 1.3)),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const SignupPage(),
+                      ),
+                    );
+                  },
+                  child: Text("Sign Up",
+                      style: Theme.of(context).textTheme.labelMedium!.apply(
+                          fontSizeFactor: 1.3, color: AColors.primary300)),
+                )
+              ],
+            )
           ],
         ),
       ),
