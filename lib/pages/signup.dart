@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:spotify/domain/usecases/signup.dart';
 import 'package:spotify/pages/login.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
@@ -73,16 +76,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-            AppButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => const LoginPage(),
-                    ),
-                  );
-                },
-                title: "Create Account"),
+            AppButton(onPressed: () {}, title: "Create Account"),
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
