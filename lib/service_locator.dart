@@ -10,5 +10,6 @@ Future<void> initializeDepedencies() async {
   sl.registerSingleton<AuthFirebaseService>(AuthFirebaseServiceImp());
 
   sl.registerSingleton<AuthRepo>(AuthRepoImp());
+
   sl.registerSingleton<SignupUseCase>(SignupUseCase());
 }

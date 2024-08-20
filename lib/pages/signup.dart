@@ -1,8 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:spotify/data/models/auth/create_user_req.dart';
 import 'package:spotify/domain/usecases/signup.dart';
 import 'package:spotify/pages/login.dart';
+import 'package:spotify/service_locator.dart';
 import 'package:spotify/utils/constants/colors.dart';
 import 'package:spotify/utils/constants/image_string.dart';
 import 'package:spotify/utils/constants/sizes.dart';
@@ -10,7 +10,11 @@ import 'package:spotify/widgets/app_button.dart';
 import 'package:spotify/widgets/custom_appbar.dart';
 
 class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+  SignupPage({super.key});
+
+  final TextEditingController _fullname = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _email = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +52,9 @@ class SignupPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 50),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _fullname,
+              decoration: const InputDecoration(
                 hintText: "Full Name",
                 hintStyle: TextStyle(color: AColors.grey),
                 filled: true,
@@ -57,8 +62,9 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _email,
+              decoration: const InputDecoration(
                 hintText: "Email",
                 hintStyle: TextStyle(color: AColors.grey),
                 filled: true,
@@ -66,9 +72,10 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            const TextField(
+            TextField(
+              controller: _password,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Password",
                 hintStyle: TextStyle(color: AColors.grey),
                 filled: true,
@@ -76,7 +83,21 @@ class SignupPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-            AppButton(onPressed: () {}, title: "Create Account"),
+            AppButton(
+                onPressed: () async {
+                  var result = await sl<SignupUseCase>().call(
+                    params: CreateUserReq(
+                      email: _email.text.toString(),
+                      password: _password.text.toString(),
+                      fullName: _fullname.text.toString(),
+                    ),
+                  );
+                  result.fold(
+                    (l) {},
+                    (r) {},
+                  );
+                },
+                title: "Create Account"),
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
